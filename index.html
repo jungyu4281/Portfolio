@@ -21,19 +21,20 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div>
-            <img src="./images/image.ico" alt="logo">
-            <h1><a href="#">Jungyu</a></h1>
+    <header class="header">
+        <!-- BEM -->
+        <div class="header__logo">
+            <img class="header__logo__img" src="./images/image.ico" alt="logo">
+            <h1 class="header__logo__title"><a href="#">Jungyu</a></h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">홈으로</a></li>
-                <li><a href="#about">류지</a></li>
-                <li><a href="#skills">기술</a></li>
-                <li><a href="#work">포트폴리오</a></li>
-                <li><a href="license">자격증</a></li>
-                <li><a href="contact">연락처</a></li>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li><a href="#home" class="header__menu__item active">홈으로</a></li>
+                <li><a href="#about" class="header__menu__item">백준규</a></li>
+                <li><a href="#skills" class="header__menu__item">기술</a></li>
+                <li><a href="#work" class="header__menu__item">포트폴리오</a></li>
+                <li><a href="#license" class="header__menu__item">자격증</a></li>
+                <li><a href="#contact" class="header__menu__item">연락처</a></li>
             </ul>
         </nav>
     </header>
@@ -42,13 +43,13 @@
         <!-- Home -->
         <section id="home">
             <img src="./images/images.jpg" alt="'Jungyu's progile">
-            <h2>안녕하세요. AI 개발자를 향해 달려가는 백준규입니다.</h2>
+            <h2 >안녕하세요. AI 개발자를 향해 달려가는 백준규입니다.</h2>
             <a href="#contact">연락처</a>
         </section>
 
         <!-- about -->
-        <section id="about">
-            <h2>백준규</h2>
+        <section id="about" class="section max-container">
+            <h2 class="title">백준규</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quae hic possimus maiores. Dolorem quam, perferendis rerum perspiciatis officiis saepe. Nesciunt ut expedita tempora rem rerum vero itaque maiores quo.</p>
             <ul>
                 <li>
@@ -74,14 +75,20 @@
                         <p>브랜디 의류 매장</p>
                         <p>2019~2020</p>
                     </div>
+                    <img src="./images/brandi.png" alt="Brandi logo">
+                    <div>
+                        <p>브랜디 의류 매장</p>
+                        <p>2019~2020</p>
+                    </div>
                 </li>
             </ul>
         </section>
 
         <!-- skills -->
-        <section id="skills">
-            <h2>skills</h2>
-            <p>언어 및 도구</p>
+        <section id="skills" class="section">
+            <div class="max-container">
+            <h2 class="title">skills</h2>
+            <p class="description">언어 및 도구</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut explicabo nesciunt recusandae, adipisci dignissimos quo quam id dicta soluta natus, cumque perspiciatis excepturi distinctio assumenda consequatur? Nostrum et excepturi atque?</p>
             <div>
                 <section>
@@ -122,12 +129,14 @@
                     </ul>
                 </section>
             </div>
+        </div>    
         </section>
 
         <!-- work -->
-        <section id="work">
-            <h2>포트폴리오</h2>
-            <p>projects</p>
+        <section id="work" class="section">
+            <div class="max-container"></div>
+            <h2 class="title">포트폴리오</h2>
+            <p class="description">projects</p>
             <ul>
                 <li><button>All <span>10</span></button></li>
                 <li><button>Front-end <span>10</span></button></li>
@@ -145,12 +154,32 @@
                     </a>
                 </li>
             </ul>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="./images/resume.png" alt="사이트">
+                        <div>
+                            <h3>Project #1</h3>
+                            <p>클론코딩 사이트</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
         </section>
 
         <!-- license -->
-        <section id="license">
-            <h2>자격증</h2>
-            <p>국가 기술 자격증</p>
+        <section id="license" class="section max-container">
+            <h2 class="title">자격증</h2>
+            <p class="description">국가 기술 자격증</p>
+            <ul>
+                <li>
+                    <img src="./images/license.jpg" alt="정보처리기사">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor atque cumque vitae dolores minus repellat alias ad! Iure perspiciatis rem quia placeat suscipit, possimus vero. Maxime aperiam neque reiciendis!
+                    <p><a href="#">산업인력공단</a></p>
+                </div>
+                </li>
+            </ul>
             <ul>
                 <li>
                     <img src="./images/license.jpg" alt="정보처리기사">
@@ -169,14 +198,16 @@
          </aside>
     </main>
     <!-- footer -->
-    <footer id="contact">
-        <h2>연락주세요!</h2>
+    <footer id="contact" class="section">
+        <div class="max-container">
+        <h2 class="title">연락주세요!</h2>
         <p>jungyu4281@gmail.com</p>
         <ul>
             <li><a href="https://github.com/jungyu4281" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
             <li><a href="https://github.com/jungyu4281" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
         </ul>
-        <p> ⓒ Jungyu - All rights reserved</p>
+        <p class="description"> ⓒ Jungyu - All rights reserved</p>
+    </div>
     </footer>
 </body>
 </html>
