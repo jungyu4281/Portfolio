@@ -52,34 +52,36 @@
         <section id="about" class="section max-container">
             <h2 class="title">백준규</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quae hic possimus maiores. Dolorem quam, perferendis rerum perspiciatis officiis saepe. Nesciunt ut expedita tempora rem rerum vero itaque maiores quo.</p>
-            <ul>
-                <li>
-                    <i class="fa-brands fa-html5"></i>
-                    <p>Front-end</p>
+            <ul class="majors">
+                <li class="major">
+                    <i class="fa-brands fa-html5 major__icon"></i>
+                    <p class="major__title">Front-end</p>
                     <p>HTML, CSS, JavaScript, Node.js, React</p>
                 </li>
-                <li>
-                    <i class="fa-solid fa-mobile"></i>
-                    <p>mobile</p>
+                <li class="major">
+                    <i class="fa-solid fa-mobile major__icon"></i>
+                    <p class="major__title">mobile</p>
                     <p>React-Native, Android, iOS, Kotlin</p>
                 </li>
-                <li>
-                    <i class="fa-solid fa-server"></i>
-                    <p>Back-end</p>
+                <li class="major">
+                    <i class="fa-solid fa-server major__icon"></i>
+                    <p class="major__title">Back-end</p>
                     <p>Node.js, FastAPI, Java, GraphQL</p>
                 </li>
             </ul>
-            <ul>
-                <li>
+            <ul class="jobs">
+                <li class="job">
                     <img src="./images/brandi.png" alt="Brandi logo">
                     <div>
-                        <p>브랜디 의류 매장</p>
-                        <p>2019~2020</p>
+                        <p class="job__name">브랜디 의류 매장</p>
+                        <p class="job__period">2019~2020</p>
                     </div>
+                </li>
+                <li class="job">
                     <img src="./images/brandi.png" alt="Brandi logo">
                     <div>
-                        <p>브랜디 의류 매장</p>
-                        <p>2019~2020</p>
+                        <p class="job__name">브랜디 의류 매장</p>
+                        <p class="job__period">2019~2020</p>
                     </div>
                 </li>
             </ul>
@@ -87,50 +89,78 @@
 
         <!-- skills -->
         <section id="skills" class="section">
-            <div class="max-container">
-            <h2 class="title">skills</h2>
-            <p class="description">언어 및 도구</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut explicabo nesciunt recusandae, adipisci dignissimos quo quam id dicta soluta natus, cumque perspiciatis excepturi distinctio assumenda consequatur? Nostrum et excepturi atque?</p>
-            <div>
-                <section>
-                    <h3>언어</h3>
+                <div class="max-container">
+                <h2 class="title">skills</h2>
+                <p class="description">언어 및 도구</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut explicabo nesciunt recusandae, adipisci dignissimos quo quam id dicta soluta natus, cumque perspiciatis excepturi distinctio assumenda consequatur? Nostrum et excepturi atque?</p>
+                <div class="skills">
+                    <section class="skills__coding">
+                        <h3 class="skills__title">언어</h3>
+                            <ul>
+                                <li class="bar">
+                                    <div  class="bar__metadata">
+                                        <span>HTML</span><span>98%</span>
+                                    </div>
+                                    <div class="bar_bg">
+                                        <div class="bar_value" style="width:98%">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata">
+                                        <span>css</span><span>90%</span>
+                                    </div>
+                                    <div class="bar_bg">
+                                        <div class="bar_value" style="width:90%"></div>
+                                    </div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata">
+                                        <span>JavaScript</span><span>80%</span>
+                                    </div>
+                                    <div class="bar_bg">
+                                        <div class="bar_value" style="width:80%"></div>
+                                    </div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata">
+                                        <span>React</span><span>80%</span>
+                                    </div>
+                                    <div class="bar_bg">
+                                        <div class="bar_value" style="width:80%"></div>
+                                    </div>
+                                </li>
+                                <li class="bar">
+                                    <div class="bar__metadata">
+                                        <span>Node.js</span><span>70%</span>
+                                    </div>
+                                    <div class="bar_bg">
+                                        <div class="bar_value" style="width:70%"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                    </section>
+                    <section class="skills__tools">
+                        <div class="max-container">
+                        <h3 class="skills__title">도구</h3>
                         <ul>
-                            <li>
-                                <div><span>HTML</span><span>98%</span></div><div style="width:98%"></div>
-                            </li>
-                            <li>
-                                <div><span>css</span><span>90%</span></div><div style="width:90%"></div>
-                            </li>
-                            <li>
-                                <div><span>JavaScript</span><span>80%</span></div><div style="width:80%"></div>
-                            </li>
-                            <li>
-                                <div><span>React</span><span>80%</span></div><div style="width:80%"></div>
-                            </li>
-                            <li>
-                                <div><span>Node.js</span><span>70%</span></div><div style="width:70%"></div>
-                            </li>
+                            <li>Visual Studio Code</li>
+                            <li>pyhcharm</li>
+                            <li>Jupyter notebook</li>
+                            <li>Colab</li>
+                            <li>Xcode</li>
                         </ul>
-                </section>
-                <section>
-                    <h3>도구</h3>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>pyhcharm</li>
-                        <li>Jupyter notebook</li>
-                        <li>Colab</li>
-                        <li>Xcode</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>기타</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>Math</li>
-                    </ul>
-                </section>
-            </div>
-        </div>    
+                        </div>
+                    </section>
+                    <section class="skills__etc">
+                        <h3 class="skills_title">기타</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Math</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>    
         </section>
 
         <!-- work -->
