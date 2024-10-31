@@ -71,14 +71,14 @@
             </ul>
             <ul class="jobs">
                 <li class="job">
-                    <img src="./images/brandi.png" alt="Brandi logo">
+                    <img class="job__img" src="./images/brandi.png" alt="Brandi logo">
                     <div>
                         <p class="job__name">브랜디 의류 매장</p>
                         <p class="job__period">2019~2020</p>
                     </div>
                 </li>
                 <li class="job">
-                    <img src="./images/brandi.png" alt="Brandi logo">
+                    <img class="job__img" src="./images/brandi.png" alt="Brandi logo">
                     <div>
                         <p class="job__name">브랜디 의류 매장</p>
                         <p class="job__period">2019~2020</p>
@@ -95,50 +95,54 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut explicabo nesciunt recusandae, adipisci dignissimos quo quam id dicta soluta natus, cumque perspiciatis excepturi distinctio assumenda consequatur? Nostrum et excepturi atque?</p>
                 <div class="skills">
                     <section class="skills__coding">
-                        <h3 class="skills__title">언어</h3>
-                            <ul>
-                                <li class="bar">
-                                    <div  class="bar__metadata">
-                                        <span>HTML</span><span>98%</span>
-                                    </div>
-                                    <div class="bar_bg">
-                                        <div class="bar_value" style="width:98%">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="bar">
-                                    <div class="bar__metadata">
-                                        <span>css</span><span>90%</span>
-                                    </div>
-                                    <div class="bar_bg">
-                                        <div class="bar_value" style="width:90%"></div>
-                                    </div>
-                                </li>
-                                <li class="bar">
-                                    <div class="bar__metadata">
-                                        <span>JavaScript</span><span>80%</span>
-                                    </div>
-                                    <div class="bar_bg">
-                                        <div class="bar_value" style="width:80%"></div>
-                                    </div>
-                                </li>
-                                <li class="bar">
-                                    <div class="bar__metadata">
-                                        <span>React</span><span>80%</span>
-                                    </div>
-                                    <div class="bar_bg">
-                                        <div class="bar_value" style="width:80%"></div>
-                                    </div>
-                                </li>
-                                <li class="bar">
-                                    <div class="bar__metadata">
-                                        <span>Node.js</span><span>70%</span>
-                                    </div>
-                                    <div class="bar_bg">
-                                        <div class="bar_value" style="width:70%"></div>
-                                    </div>
-                                </li>
-                            </ul>
+                        <h3 class="skills__title">languages</h3>
+                        <ul>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>HTML</span>
+                                    <span>98%</span>
+                                </div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 98%;"></div>
+                                </div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>CSS</span>
+                                    <span>77%</span>
+                                </div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 77%;"></div>
+                                </div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>JavaScript</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 88%;"></div>
+                                </div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>React</span>
+                                    <span>69%</span>
+                                </div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 69%;"></div>
+                                </div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata">
+                                    <span>Node.js</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 88%;"></div>
+                                </div>
+                            </li>
+                        </ul>
                     </section>
                     <section class="skills__tools">
                         <div class="max-container">
@@ -153,7 +157,7 @@
                         </div>
                     </section>
                     <section class="skills__etc">
-                        <h3 class="skills_title">기타</h3>
+                        <h3 class="skills__title">기타</h3>
                         <ul>
                             <li>Git</li>
                             <li>Math</li>
@@ -168,29 +172,89 @@
             <div class="max-container"></div>
             <h2 class="title">포트폴리오</h2>
             <p class="description">projects</p>
-            <ul>
-                <li><button>All <span>10</span></button></li>
-                <li><button>Front-end <span>10</span></button></li>
-                <li><button>Mobile <span>10</span></button></li>
-                <li><button>Back-end <span>10</span></button></li>
-            </ul>
-            <ul>
+            <ul class="categories">
                 <li>
+                    <button class="category category--selected">All <span class="category__count">10</span></button>
+                </li>
+                <li>
+                    <button class="category">Front-end <span class="category__count">5</span></button>
+                </li>
+                <li>
+                    <button class="category">Mobile <span class="category__count">3</span ></button>
+                    </li>
+                <li>
+                    <button class="category">Back-end <span class="category__count">8</span></button>
+                </li>
+            </ul>
+            <ul class="projects">
+                <li class="project">
                     <a href="#" target="_blank">
-                        <img src="./images/resume.png" alt="사이트">
-                        <div>
-                            <h3>Project #1</h3>
+                        <img src="./images/resume.png" alt="사이트" class="project__img">
+                        <div class="project__metadata">
+                            <h3 class="project__title">Project #1</h3>
                             <p>클론코딩 사이트</p>
                         </div>
                     </a>
                 </li>
-            </ul>
-            <ul>
-                <li>
+                <li class="project">
                     <a href="#" target="_blank">
-                        <img src="./images/resume.png" alt="사이트">
-                        <div>
-                            <h3>Project #1</h3>
+                        <img src="./images/resume.png" alt="사이트" class="project__img">
+                        <div class="project__metadata">
+                            <h3 class="project__title">Project #1</h3>
+                            <p>클론코딩 사이트</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="#" target="_blank">
+                        <img src="./images/resume.png" alt="사이트" class="project__img">
+                        <div class="project__metadata">
+                            <h3 class="project__title">Project #1</h3>
+                            <p>클론코딩 사이트</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="#" target="_blank">
+                        <img src="./images/resume.png" alt="사이트" class="project__img">
+                        <div class="project__metadata">
+                            <h3 class="project__title">Project #1</h3>
+                            <p>클론코딩 사이트</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="#" target="_blank">
+                        <img src="./images/resume.png" alt="사이트" class="project__img">
+                        <div class="project__metadata">
+                            <h3 class="project__title">Project #1</h3>
+                            <p>클론코딩 사이트</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="#" target="_blank">
+                        <img src="./images/resume.png" alt="사이트" class="project__img">
+                        <div class="project__metadata">
+                            <h3 class="project__title">Project #1</h3>
+                            <p>클론코딩 사이트</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="#" target="_blank">
+                        <img src="./images/resume.png" alt="사이트" class="project__img">
+                        <div class="project__metadata">
+                            <h3 class="project__title">Project #1</h3>
+                            <p>클론코딩 사이트</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="#" target="_blank">
+                        <img src="./images/resume.png" alt="사이트" class="project__img">
+                        <div class="project__metadata">
+                            <h3 class="project__title">Project #1</h3>
                             <p>클론코딩 사이트</p>
                         </div>
                     </a>
@@ -203,19 +267,22 @@
         <section id="license" class="section max-container">
             <h2 class="title">자격증</h2>
             <p class="description">국가 기술 자격증</p>
-            <ul>
-                <li>
-                    <img src="./images/license.jpg" alt="정보처리기사">
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor atque cumque vitae dolores minus repellat alias ad! Iure perspiciatis rem quia placeat suscipit, possimus vero. Maxime aperiam neque reiciendis!
-                    <p><a href="#">산업인력공단</a></p>
+            <ul class="licenses">
+                <li class="license">
+                    <img class="license__img" src="./images/license.jpg" alt="정보처리기사">
+                    <div class="license__bubble"><p><a href="#" class="license__bubble__name">산업인력공단</a></p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor atque cumque vitae dolores minus repellat alias ad! Iure perspiciatis rem quia placeat suscipit, possimus vero. Maxime aperiam neque reiciendis!
                 </div>
                 </li>
-            </ul>
-            <ul>
-                <li>
-                    <img src="./images/license.jpg" alt="정보처리기사">
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor atque cumque vitae dolores minus repellat alias ad! Iure perspiciatis rem quia placeat suscipit, possimus vero. Maxime aperiam neque reiciendis!
-                    <p><a href="#">산업인력공단</a></p>
+                <li class="license">
+                    <img class="license__img" src="./images/license.jpg" alt="정보처리기사">
+                    <div class="license__bubble"><p><a href="#" class="license__bubble__name">산업인력공단</a></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor atque cumque vitae dolores minus repellat alias ad! Iure perspiciatis rem quia placeat suscipit, possimus vero. Maxime aperiam neque reiciendis!
+                    
+                </div>
+                </li>
+                <li class="license">
+                    <img class="license__img" src="./images/license.jpg" alt="정보처리기사">
+                    <div class="license__bubble"><p><a href="#" class="license__bubble__name">산업인력공단</a></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor atque cumque vitae dolores minus repellat alias ad! Iure perspiciatis rem quia placeat suscipit, possimus vero. Maxime aperiam neque reiciendis!
                 </div>
                 </li>
             </ul>
@@ -223,7 +290,7 @@
 
         <!-- Arrow up -->
          <aside>
-            <a href="#home" title="위로">
+            <a class="arrow-up" href="#home" title="위로">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
          </aside>
@@ -232,10 +299,10 @@
     <footer id="contact" class="section">
         <div class="max-container">
         <h2 class="title">연락주세요!</h2>
-        <p>jungyu4281@gmail.com</p>
-        <ul>
-            <li><a href="https://github.com/jungyu4281" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://github.com/jungyu4281" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
+        <p class="description">jungyu4281@gmail.com</p>
+        <ul class="contact__links">
+            <li><a class="contact__link" href="https://github.com/Ryu-JungWon" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
+            <li><a class="contact__link" href="https://github.com/Ryu-JungWon" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
         </ul>
         <p class="description"> ⓒ Jungyu - All rights reserved</p>
     </div>

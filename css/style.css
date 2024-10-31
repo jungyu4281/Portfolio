@@ -11,7 +11,7 @@
     --color-primary: var(--color-black);
     --color-primary-variant: var(--color-gray);
     --color-accent: var(--color-blue);
-    --color-accent-variant: var(--color-otrange);
+    --color-accent-variant: var(--color-orange);
     --color-text: var(--color-white);
 
 
@@ -224,6 +224,14 @@ button:focus{
     font-size:  0.8rem;
 }
 
+.jop__img{
+    width: 200px;
+    height: 140px;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0, 0.24) 0px 3px 8px;
+    margin-right: 20px;
+    object-fit: cover;
+}
 /* skills */
 #skills{
     background-color: var(--color-primary-variant);
@@ -288,4 +296,174 @@ button:focus{
     padding: 1rem;
     background-color: var(--color-primary);
     filter: brightness(150%);
+}
+
+/* work */
+#work{
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    /* 요소간의 외부 여백*/
+    margin: 2.5rem;
+    /* 그리드, 플렉스 레이아웃에서 자식 요소간의 사이 간격 */
+    gap: 1rem;
+}
+
+.category{
+    position: relative;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.category--selected{
+    background-color: var(--color-accent);
+}
+
+.category__count{
+    opacity: 0;
+    position: absolute;
+    top: -20px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 100%;
+    background-color: var(--color-accent-variant);
+    color: var(--color-text);
+    transition: all 250ms ease;
+}
+
+.category--selected .category__count, .category:hover .category__count{
+    opacity: 1;
+    top:0;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.project{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project__img{
+    width: 100%;
+}
+
+.project__metadata{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in;
+    transform: translateY(-10px);
+}
+
+.project__metadata:hover{
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+
+.project__title:after{
+    content:'';
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0.5rem 0;
+    width:50px;
+    height:2px;
+    background-color: var(--color-accent);
+}
+
+/* license */
+.licenses{
+    margin: 3rem;
+}
+
+.license{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.license:nth-child(even) .license__img{
+    order: 1;
+}
+
+.license__img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow: rgba(0,0,0,0.3) 0px 3px 8px;
+}
+
+.license__bubble{
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: rgba(0,0,0,0.3) 0px 3px 8px;
+}
+
+.license__bubble__name{
+    color: var(--color-accent);
+    font-weight: bold;
+    filter: brightness(70%);
+}
+
+/* arrow up */
+.arrow-up{
+    background-color: var(--color-primary);
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    text-align: center;
+    box-shadow: 5px 5px 0px 0px var(--color-accent);
+}
+
+/* footer */
+#contact{
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.contact__links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.contact__link{
+    transition: var(--color-accent) 250ms ease-in;
+}
+
+.contact__link:hover{
+    color: var(--color-accent);
 }
