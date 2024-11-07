@@ -18,6 +18,7 @@
     <meta property="og:image" content="배보후 생성된 이미지 URL">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/main.js" defer></script>
+    <script src="./js/projects.js" defer></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f7dd1374de.js" crossorigin="anonymous"></script>
 
@@ -184,20 +185,20 @@
             <p class="description">projects</p>
             <ul class="categories">
                 <li>
-                    <button class="category category--selected">All <span class="category__count">10</span></button>
+                    <button class="category category--selected" data-category="all">All <span class="category__count">10</span></button>
                 </li>
                 <li>
-                    <button class="category">Front-end <span class="category__count">5</span></button>
+                    <button class="category" data-category="Front-end">Front-end <span class="category__count">5</span></button>
                 </li>
                 <li>
-                    <button class="category">Mobile <span class="category__count">3</span ></button>
+                    <button class="category" data-category="Mobile">Mobile <span class="category__count">3</span ></button>
                     </li>
                 <li>
-                    <button class="category">Back-end <span class="category__count">8</span></button>
+                    <button class="category" data-category="Back-end">Back-end <span class="category__count">8</span></button>
                 </li>
             </ul>
             <ul class="projects">
-                <li class="project">
+                <li class="project" data-type="Front-end">
                     <a href="#" target="_blank">
                         <img src="./images/resume.png" alt="사이트" class="project__img">
                         <div class="project__metadata">
@@ -206,7 +207,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project" data-type="Front-end">
                     <a href="#" target="_blank">
                         <img src="./images/resume.png" alt="사이트" class="project__img">
                         <div class="project__metadata">
@@ -215,7 +216,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project" data-type="Mobile">
                     <a href="#" target="_blank">
                         <img src="./images/resume.png" alt="사이트" class="project__img">
                         <div class="project__metadata">
@@ -224,7 +225,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project" data-type="Mobile">
                     <a href="#" target="_blank">
                         <img src="./images/resume.png" alt="사이트" class="project__img">
                         <div class="project__metadata">
@@ -233,7 +234,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project" data-type="Mobile">
                     <a href="#" target="_blank">
                         <img src="./images/resume.png" alt="사이트" class="project__img">
                         <div class="project__metadata">
@@ -242,7 +243,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project" data-type="Back-end"> 
                     <a href="#" target="_blank">
                         <img src="./images/resume.png" alt="사이트" class="project__img">
                         <div class="project__metadata">
@@ -251,7 +252,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project" data-type="Back-end">
                     <a href="#" target="_blank">
                         <img src="./images/resume.png" alt="사이트" class="project__img">
                         <div class="project__metadata">
@@ -260,7 +261,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="project">
+                <li class="project" data-type="Back-end">
                     <a href="#" target="_blank">
                         <img src="./images/resume.png" alt="사이트" class="project__img">
                         <div class="project__metadata">
