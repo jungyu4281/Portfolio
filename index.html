@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jungyu&#39;s Portfolio</title>
+    <!-- &#39; =' 문자 -->
+    <title>Jungyu&#39;s Portfolio</title> 
+    <!-- 검색 알고리즘 description -->
     <meta name="description" content="AI 개발자가 되어가는 중">
+    <!-- 페이지 저자 정보를 제공하는 설명 -->
     <meta name="author" contnet="Jungyu">
+    <!-- 상단 title 옆에있는 작은 아이콘 그림 -->
     <link rel="shortcut icon" href="./images/image.ico" type="images/x-icon">
-    <!-- OG (Open Graph Data) -->
+    <!-- OG (Open Graph Data) 현재 코딩된 페이지의 정보를 정의하는 메타 태그들-->
     <meta property="og:title" content="준규의 포트폴리오">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="배보후 생성된 URL">
+    <meta property="og:url" content="https://jungyu4281.github.io/WebPortfolio/">
     <meta property="og:image" content="배보후 생성된 이미지 URL">
     <link rel="stylesheet" href="./css/style.css">
-
+    <script src="./js/main.js" defer></script>
     <!-- Font Awesome -->
-     <script src="https://kit.fontawesome.com/f7dd1374de.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f7dd1374de.js" crossorigin="anonymous"></script>
 
 
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <!-- BEM -->
+        <!-- BEM (Block element Modifier) 블록 요소 변형, 즉 가독성 높여주기-->
+        <!-- 블록 = header / 요소 = header__logo / 변형 = header__logo__img,title...  -->
         <div class="header__logo">
             <img class="header__logo__img" src="./images/image.ico" alt="logo">
             <h1 class="header__logo__title"><a href="#">Jungyu</a></h1>
@@ -37,15 +42,20 @@
                 <li><a href="#contact" class="header__menu__item">연락처</a></li>
             </ul>
         </nav>
+        <button class="header__toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
     <!-- Main -->
     <main>
         <!-- Home -->
         <section id="home">
-            <img class="home__avatar" src="./images/images.jpg" alt="'Jungyu's progile">
-            <h2 class="home__title">안녕하세요! <br><strong class="home__title--strong">백준규</strong>입니다.</h2>
-            <p class="home__description"> AI 개발자를 향해 달려가는 청년입니다.</p>
-            <a class="home__contact" href="#contact">연락처</a>
+            <div class="home__container">
+                <img class="home__avatar" src="./images/images.jpg" alt="'Jungyu's progile">
+                <h2 class="home__title">안녕하세요! <br><strong class="home__title--strong">백준규</strong>입니다.</h2>
+                <p class="home__description"> AI 개발자를 향해 달려가는 청년입니다.</p>
+                <a class="home__contact" href="#contact">연락처</a>
+            </div>
         </section>
 
         <!-- about -->
@@ -301,8 +311,8 @@
         <h2 class="title">연락주세요!</h2>
         <p class="description">jungyu4281@gmail.com</p>
         <ul class="contact__links">
-            <li><a class="contact__link" href="https://github.com/Ryu-JungWon" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
-            <li><a class="contact__link" href="https://github.com/Ryu-JungWon" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
+            <li><a class="contact__link" href="https://github.com/jungyu4281" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
+            <li><a class="contact__link" href="https://github.com/jungyu4281" target="_blank" title="깃허브"><i class="fa-brands fa-github"></i></a></li>
         </ul>
         <p class="description"> ⓒ Jungyu - All rights reserved</p>
     </div>

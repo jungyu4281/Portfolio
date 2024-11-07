@@ -30,6 +30,7 @@
 }
 
 body{
+    /* 왼쪽의 퍼온 글꼴을 사용, 허나 불러오기가 늦어 사용 안될시, 오른쪽의 기본값의 글꼴을 제공 */
     font-family: 'S-CoreDream-3Light', sans-serif;
     margin:0;
 }
@@ -71,6 +72,7 @@ button:focus{
 .title{
     font-size: 2.5rem;
     margin: 1rem 0;
+    
 }
 
 .description{
@@ -80,8 +82,8 @@ button:focus{
 
 /* Header */
 .header{
-    background-color: var(--color-primary);
-    position:fixed;
+    background-color:var(--color-primary);
+    position:fixed;  /* 해당 요소를뷰포트에 고정시킴, 즉 스크롤해도 상단에 고정되어 보임 (네비게이터에도 쓰임) */
     top:0;
     width:100%;
     padding:1rem;
@@ -89,6 +91,12 @@ button:focus{
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+    transition: all 300ms ease;
+}
+
+.header--dark{
+    background-color: var(--color-primary);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
 }
 
 .header__logo{
@@ -107,13 +115,24 @@ button:focus{
     font-size: 1.8rem;
 }
 
+.header__toggle{
+    display: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+}
+
 .header__menu{
     display: flex;
     gap: 4px;
 }
 
 .header__menu__item{
+    display: block;
     padding:8px 16px;
+    border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover{
@@ -156,7 +175,7 @@ button:focus{
 }
 
 .home__contact{
-    display: inline-block;
+    display: inline-block;   /* 인라인 요소처럼 옆으로 나란히 배치되도록 하면서도, 블록 요소처럼 너비와 높이를 설정할수 있게 해줌, 이렇게하면 여백 패딩이 가능 */
     background-color: var(--color-accent);
     color: var(--color-black);
     margin: 2rem;
@@ -408,7 +427,7 @@ button:focus{
     align-items: center;
     margin-bottom: 2rem;
 }
-
+/* 오더를해줘서 이미지가 서로 교차시켜서 나오게 됨 */
 .license:nth-child(even) .license__img{
     order: 1;
 }
@@ -444,6 +463,7 @@ button:focus{
     border-radius: 100%;
     text-align: center;
     box-shadow: 5px 5px 0px 0px var(--color-accent);
+    transition: opacity 300ms ease-in;
 }
 
 /* footer */
@@ -486,11 +506,19 @@ button:focus{
         align-items: start;
     }
 
+    .header__toggle{
+        display: block;
+    }
+
     .header__menu{
+        display: none;
         flex-direction: column;
         text-align: center;
         padding: 1rem 4rem;
         gap: 1rem;
+    }
+    .header__menu.open{
+        display: flex;
     }
 
     .header__nav{
