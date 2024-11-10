@@ -146,6 +146,10 @@ button:focus{
 
 /* Home */
 #home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: var(--color-primary);
     color: var(--color-text);
     padding: 7rem 1rem 5rem;
@@ -190,6 +194,14 @@ button:focus{
     outline: 2px solid var(--color-accent);
 }
 /* about */
+#about{
+    min-height: 120vh;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .majors{
     display: flex;
     justify-content: space-between;
@@ -253,6 +265,12 @@ button:focus{
 }
 /* skills */
 #skills{
+    min-height: 120vh; /* 높이를 늘려서 모든 콘텐츠가 표시되도록 설정 */
+    padding: 4rem 1rem; /* 충분한 상하 여백 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-primary-variant);
     color: var(--color-text);
 }
@@ -326,38 +344,43 @@ button:focus{
 .categories{
     display: flex;
     justify-content: center;
-    /* 요소간의 외부 여백*/
     margin: 2.5rem;
-    /* 그리드, 플렉스 레이아웃에서 자식 요소간의 사이 간격 */
     gap: 1rem;
 }
-
-.category{
+.category {
     position: relative;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
     color: var(--color-text);
     font-size: 1.1rem;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 4px;
     border: 1px solid var(--color-accent);
     cursor: pointer;
-    white-space: nowrap;
+    white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
+    min-width: 100px;
 }
 
-.category--selected{
+.category--selected {
     background-color: var(--color-accent);
+    color: var(--color-black); 
 }
 
-.category__count{
+.category__count {
     opacity: 0;
     position: absolute;
-    top: -20px;
-    right: 16px;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    border-radius: 100%;
-    background-color: var(--color-accent-variant);
-    color: var(--color-text);
+    top: -20px; 
+    right: -11px; 
+    width: 24px; 
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--color-accent-variant); 
+    color: var(--color-text); 
+    font-size: 0.8rem;
+    font-weight: bold;
     transition: all 250ms ease;
 }
 
@@ -423,6 +446,15 @@ button:focus{
 }
 
 /* license */
+#license {
+    padding: 6rem 1rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
 .licenses{
     margin: 3rem;
 }
@@ -433,7 +465,7 @@ button:focus{
     align-items: center;
     margin-bottom: 2rem;
 }
-/* 오더를해줘서 이미지가 서로 교차시켜서 나오게 됨 */
+
 .license:nth-child(even) .license__img{
     order: 1;
 }
@@ -474,8 +506,18 @@ button:focus{
 
 /* footer */
 #contact{
+    padding: 4rem 1rem; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-primary);
     color: var(--color-text);
+}
+
+.contact__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem; 
 }
 
 .contact__links{
@@ -496,7 +538,8 @@ button:focus{
 
 @media screen and (max-width: 768px){
     .section{
-        padding: 3rem 2rem;
+        min-height: 90vh;
+        padding: 3rem 1rem;
     }
 
     .title{
@@ -507,6 +550,7 @@ button:focus{
         font-size: 1rem;
     }
 
+    /* header */
     .header{
         flex-direction: column;
         align-items: start;
@@ -539,9 +583,15 @@ button:focus{
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
     }
+
+    #about{
+        min-height:auto;
+        padding: 3rem 1rem;
+    }
     .majors{
         flex-direction: column;
         align-items: center;
+        gap:2rem;
     }
     .major{
         max-width: 25rem;
@@ -555,9 +605,11 @@ button:focus{
     }
     .categories{
         flex-direction: column;
+        align-items: center; 
     }
 
     .category{
+        min-width: 120px;
         width:100px;
     }
 
@@ -576,7 +628,7 @@ button:focus{
         width: 3rem;
         height: 3rem;
         bottom: 1.5rem;
-        right: 1.5;
+        right: 1.5rem;
         
     }
 }
